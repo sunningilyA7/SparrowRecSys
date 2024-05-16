@@ -20,37 +20,41 @@ The project's own data set has been streamlined from the MovieLens data set, ret
 ## SparrowRecSys technology 
 SparrowRecSys technical architecture follows the classic industrial-grade deep learning recommendation system architecture, including multiple modules such as offline data processing, model training, near-line stream processing, online model services, and front-end recommendation result display. The following is the architecture diagram of SparrowRecSys:
 
-It is divided into three main sections: data processing, model part, and frontend part.
+* It is divided into three main sections: data processing, model part, and frontend part.
 
-Data Processing Section 
-User Information : User data includes user actions, social relationships, and attribute tags.
-Item Information : Item data includes item attributes, tags, and third-party information.
-Context Information : Contextual data includes time, location, and other contextual parameters.
-Data Processing Platforms:
-Flink: Used for real-time data processing.
-Spark: Used for offline data processing.
-Redis: Used for storing user, item, and context features.
-Feature Engineering:
-User Features: User actions, social relationships, attribute tags.
-Item Features: Item attributes, tags, third-party information.
-Context Features: Time, location, and other contextual parameters.
-Techniques: Normalization, binarization, non-linear transformations, ID features, one-hot encoding, embedding, feature combination.
-Model Part 
-Recommendation System Model and Online Serving:
-Cold Start Strategy :
-Recall Layer : Embedding, collaborative filtering, multi-dimensional tags, social relationships, freshness update.
-Ranking Layer : Temporal and sequential models, LR (Logistic Regression), FM (Factorization Machines), MLR (Multivariate Linear Regression), deep learning models.
-Filling Strategy Algorithm : Diversity, novelty, hotness, flow control, freshness.
-Exploration and Utilization : Interaction with candidate item database.
-Model Serving:
-MLeap: Model deployment.
-TensorFlow Serving: Model serving.
-Model Training:
-Platforms: Spark MLlib, TensorFlow.
-Offline evaluation: Metrics include AUC, Recall, RMSE.
-Frontend Part 
-Implementation: Based on HTML and JavaScript with AJAX functionalities.
-Recommendation Item List : Display of recommended items.
+* Data Processing Section 
+* User Information : User data includes user actions, social relationships, and attribute tags.
+* Item Information : Item data includes item attributes, tags, and third-party information.
+* Context Information : Contextual data includes time, location, and other contextual parameters.
+* Data Processing Platforms:
+* Flink: Used for real-time data processing.
+* Spark: Used for offline data processing.
+* Redis: Used for storing user, item, and context features.
+* 
+* Feature Engineering:
+* User Features: User actions, social relationships, attribute tags.
+* Item Features: Item attributes, tags, third-party information.
+* Context Features: Time, location, and other contextual parameters.
+* Techniques: Normalization, binarization, non-linear transformations, ID features, one-hot encoding, embedding, feature combination.
+* 
+* Model Part 
+* Recommendation System Model and Online Serving:
+* Cold Start Strategy :
+* Recall Layer : Embedding, collaborative filtering, multi-dimensional tags, social relationships, freshness update.
+* Ranking Layer : Temporal and sequential models, LR (Logistic Regression), FM (Factorization Machines), MLR (Multivariate Linear Regression), deep learning models.
+* Filling Strategy Algorithm : Diversity, novelty, hotness, flow control, freshness.
+* Exploration and Utilization : Interaction with candidate item database.
+* 
+* Model Serving:
+* 
+* MLeap: Model deployment.
+* TensorFlow Serving: Model serving.
+* Model Training:
+* Platforms: Spark MLlib, TensorFlow.
+* Offline evaluation: Metrics include AUC, Recall, RMSE.
+* Frontend Part 
+* Implementation: Based on HTML and JavaScript with AJAX functionalities.
+* Recommendation Item List : Display of recommended items.
 
 
 ## SparrowRecSys Implemented deep learning model
