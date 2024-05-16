@@ -1,26 +1,28 @@
 # SparrowRecSys
-SparrowRecSys是一个电影推荐系统，名字SparrowRecSys（麻雀推荐系统），取自“麻雀虽小，五脏俱全”之意。项目是一个基于maven的混合语言项目，同时包含了TensorFlow，Spark，Jetty Server等推荐系统的不同模块。希望你能够利用SparrowRecSys进行推荐系统的学习，并有机会一起完善它。
+SparrowRecSys is a movie recommendation system, named SparrowRecSys (Sparrow Recommendation System), which means "a sparrow is small but has all the internal organs".
+The project is a mixed language project based on maven, which also includes different modules of recommendation systems such as TensorFlow, Spark, and Jetty Server.
 
-## 基于SparrowRecSys的实践课程
-受极客时间邀请开设 [深度学习推荐系统实战](http://gk.link/a/10lyE) 课程，详细讲解了SparrowRecSys的所有技术细节，覆盖了深度学习模型结构，模型训练，特征工程，模型评估，模型线上服务及推荐服务器内部逻辑等模块。
 
-## 环境要求
+## environment
 * Java 8
 * Scala 2.11
 * Python 3.6+
 * TensorFlow 2.0+
 
-## 快速开始
-将项目用IntelliJ打开后，找到`RecSysServer`，右键点选`Run`，然后在浏览器中输入`http://localhost:6010/`即可看到推荐系统的前端效果。
 
-## 项目数据
-项目数据来源于开源电影数据集[MovieLens](https://grouplens.org/datasets/movielens/)，项目自带数据集对MovieLens数据集进行了精简，仅保留1000部电影和相关评论、用户数据。全量数据集请到MovieLens官方网站进行下载，推荐使用MovieLens 20M Dataset。
 
-## SparrowRecSys技术架构
-SparrowRecSys技术架构遵循经典的工业级深度学习推荐系统架构，包括了离线数据处理、模型训练、近线的流处理、线上模型服务、前端推荐结果显示等多个模块。以下是SparrowRecSys的架构图：
+## project data
+The project data comes from the open source movie data set
+[MovieLens](https://grouplens.org/datasets/movielens/)，
+The project's own data set has been streamlined from the MovieLens data set, retaining only 1,000 movies and related comments and user data. Please go to MovieLens official website to download the full dataset. It is recommended to use MovieLens 20M Dataset.
+
+
+## SparrowRecSys technology 
+SparrowRecSys technical architecture follows the classic industrial-grade deep learning recommendation system architecture, including multiple modules such as offline data processing, model training, near-line stream processing, online model services, and front-end recommendation result display. The following is the architecture diagram of SparrowRecSys:
+
 ![alt text](https://github.com/wzhe06/SparrowRecSys/raw/master/docs/sparrowrecsysarch.png)
 
-## SparrowRecSys实现的深度学习模型
+## SparrowRecSys Implemented deep learning model
 * Word2vec (Item2vec)
 * DeepWalk (Random Walk based Graph Embedding)
 * Embedding MLP
@@ -30,7 +32,7 @@ SparrowRecSys技术架构遵循经典的工业级深度学习推荐系统架构�
 * DeepFM
 * DIN(Deep Interest Network)
 
-## 相关论文
+## related paper
 * [[FFM] Field-aware Factorization Machines for CTR Prediction (Criteo 2016)](https://github.com/wzhe06/Ad-papers/blob/master/Classic%20CTR%20Prediction/%5BFFM%5D%20Field-aware%20Factorization%20Machines%20for%20CTR%20Prediction%20%28Criteo%202016%29.pdf) <br />
 * [[GBDT+LR] Practical Lessons from Predicting Clicks on Ads at Facebook (Facebook 2014)](https://github.com/wzhe06/Ad-papers/blob/master/Classic%20CTR%20Prediction/%5BGBDT%2BLR%5D%20Practical%20Lessons%20from%20Predicting%20Clicks%20on%20Ads%20at%20Facebook%20%28Facebook%202014%29.pdf) <br />
 * [[PS-PLM] Learning Piece-wise Linear Models from Large Scale Data for Ad Click Prediction (Alibaba 2017)](https://github.com/wzhe06/Ad-papers/blob/master/Classic%20CTR%20Prediction/%5BPS-PLM%5D%20Learning%20Piece-wise%20Linear%20Models%20from%20Large%20Scale%20Data%20for%20Ad%20Click%20Prediction%20%28Alibaba%202017%29.pdf) <br />
